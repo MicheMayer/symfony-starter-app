@@ -1,0 +1,60 @@
+{
+    "name": "michemayer/symfony-starter-app",
+    "authors": [
+        {
+            "name": "Michael Mayer",
+            "homepage": "https://github.com/MicheMayer"
+        }
+    ],
+    "license": "MIT",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "symfony/console": "6.*",
+        "symfony/dotenv": "6.*",
+        "symfony/error-handler": "6.*",
+        "symfony/filesystem": "6.*",
+        "symfony/framework-bundle": "6.*",
+        "symfony/property-access": "^6.1",
+        "symfony/runtime": "6.*",
+        "symfony/serializer": "^6.1",
+        "symfony/yaml": "6.*"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "escapestudios/symfony2-coding-standard": "3.x-dev",
+        "squizlabs/php_codesniffer": "3.*",
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "5.0.0-beta1"
+    },
+    "scripts": {
+        "auto-scripts": [
+            "bin/console cache:clear"
+        ],
+        "install-codestandards": [
+            "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+        ],
+        "post-install-cmd": [
+            "@install-codestandards",
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@install-codestandards",
+            "@auto-scripts"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "symfony/runtime": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Dev\\App\\": "app/"
+        }
+    }
+}

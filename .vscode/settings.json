@@ -1,0 +1,19 @@
+{
+    "phpcs.composerJsonPath": ".",
+    "phpcs.ignorePatterns": [
+        "vendor/*"
+    ],
+    "phpcs.standard": "ruleset.xml",
+    "phpcs.showWarnings": true,
+    "phpcs.showSources": true,
+    "phpsab.snifferEnable": false,
+    "phpsab.composerJsonPath": ".",
+    "phpsab.standard": "ruleset.xml",
+    "phpsab.fixerArguments": [
+        "--ignore=vendor/*"
+    ],
+    "[php]": {
+        "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+    },
+    "files.eol": "\n"
+}

@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "install dependencies",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "composer install",
+            "presentation": {
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "develop",
+            "detail": "Start development server",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "command": "symfony",
+            "args": [
+                "server:start",
+                "--dir=/usr/local/src/public"
+            ],
+            "presentation": {
+                "revealProblems": "onProblem",
+                "panel": "shared",
+            }
+        },
+        {
+            "label": "Update autoloader",
+            "detail": "Update autoloader class map",
+            "type": "shell",
+            "group": "build",
+            "command": "composer dump-autoload",
+        },
+        {
+            "label": "analyse code",
+            "type": "shell",
+            "command": "vendor/bin/psalm",
+            "args": [
+                "-c=psalm.xml",
+            ],
+            "problemMatcher": {
+                "owner": "php",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "severity": "warning",
+                "pattern": {
+                    "regexp": "^(ERROR):\\s([^\\s]+)\\s-\\s([^:]+):([0-9]+):([0-9]+)\\s-\\s(.+)$",
+                    "file": 3,
+                    "line": 4,
+                    "column": 5,
+                    "severity": 1,
+                    "message": 6,
+                    "code": 2
+                }
+            },
+            "presentation": {
+                "showReuseMessage": false,
+                "clear": true
+            }
+        }
+    ]
+}
