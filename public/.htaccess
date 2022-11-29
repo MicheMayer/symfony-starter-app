@@ -19,5 +19,7 @@ ErrorDocument 404 "Oops! Da stimmt was nicht!"
 	RewriteRule \.php$ /%1/ [R=302,QSA,NC,L]
 
     # Funnel page requests to index and try to serve content:
+    RewriteCond %{REQUEST_URI} !^/bundles/ [NC]
+    RewriteCond %{REQUEST_URI} !^/assets/ [NC]
     RewriteRule . index.php [QSA]
 </IfModule>
