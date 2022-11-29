@@ -23,6 +23,7 @@
         "symfony/runtime": "6.*",
         "symfony/serializer": "^6.1",
         "symfony/twig-bundle": "6.*",
+        "symfony/webpack-encore-bundle": "^1.16",
         "symfony/yaml": "6.*"
     },
     "require-dev": {

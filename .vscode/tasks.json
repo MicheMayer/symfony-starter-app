@@ -2,42 +2,48 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "install dependencies",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "command": "composer install",
-            "presentation": {
-                "showReuseMessage": false,
-                "clear": true
-            }
-        },
-        {
-            "label": "develop",
+            "label": "dev-server",
             "detail": "Start development server",
             "type": "shell",
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
+            "command": "echo 'done'",
+            "dependsOn": [
+                "symfony-dev",
+                "encore-dev"
+            ]
+        },
+        {
+            "label": "symfony-dev",
+            "detail": "Start php web server",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+            },
             "command": "symfony",
             "args": [
                 "server:start",
-                "--dir=/usr/local/src/public"
+                "--dir=/usr/local/src/public",
             ],
             "presentation": {
-                "revealProblems": "onProblem",
-                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
             }
         },
         {
-            "label": "Update autoloader",
-            "detail": "Update autoloader class map",
+            "label": "encore-dev",
+            "detail": "Start encore hot reload server",
             "type": "shell",
-            "group": "build",
-            "command": "composer dump-autoload",
+            "group": {
+                "kind": "test",
+            },
+            "command": "npm run dev-server",
+            "presentation": {
+                "showReuseMessage": false,
+                "clear": true
+            }
         },
         {
             "label": "analyse code",
@@ -67,6 +73,33 @@
                 "showReuseMessage": false,
                 "clear": true
             }
-        }
+        },
+        {
+            "label": "install composer dependencies",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+            },
+            "command": "composer install",
+            "presentation": {
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "label": "install npm dependencies",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+            },
+            "command": "npm install",
+            "dependsOn": [
+                "install composer dependencies",
+            ],
+            "presentation": {
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
     ]
 }

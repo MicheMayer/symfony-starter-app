@@ -26,3 +26,7 @@ RUN mv ${HOME}/.symfony5/bin /usr/local/bin/symfony
 ENV PATH="/usr/local/bin/symfony:${PATH}"
 
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+RUN nvm install v18
+RUN nvm alias default v18
