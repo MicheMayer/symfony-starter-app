@@ -33,7 +33,10 @@
         "vimeo/psalm": "5.0.0-beta1"
     },
     "scripts": {
-        "auto-scripts": ["symfony-cmd"],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
         "install-codestandards": [
             "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
         ],
