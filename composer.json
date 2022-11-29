@@ -15,6 +15,7 @@
         "symfony/dotenv": "6.*",
         "symfony/error-handler": "6.*",
         "symfony/filesystem": "6.*",
+        "symfony/flex": "^2.2",
         "symfony/framework-bundle": "6.*",
         "symfony/property-access": "^6.1",
         "symfony/runtime": "6.*",
@@ -29,9 +30,7 @@
         "vimeo/psalm": "5.0.0-beta1"
     },
     "scripts": {
-        "auto-scripts": [
-            "bin/console cache:clear"
-        ],
+        "auto-scripts": ["symfony-cmd"],
         "install-codestandards": [
             "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
         ],
@@ -44,17 +43,24 @@
             "@auto-scripts"
         ]
     },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "symfony/flex": true
         }
     },
     "autoload": {
         "psr-4": {
             "Dev\\App\\": "app/"
         }
+    },
+    "extra": {
+        "src-dir": "app"
     }
 }
