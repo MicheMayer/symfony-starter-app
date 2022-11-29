@@ -4,4 +4,4 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
     Dev\App\:
-        resource: ../app
+        resource: '%kernel.project_dir%/app'

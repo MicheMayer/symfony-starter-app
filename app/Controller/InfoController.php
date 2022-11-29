@@ -21,6 +21,6 @@ class InfoController extends AbstractController
     #[Route('/', name: 'index')]
     public function legacyPages(): Response
     {
-        return new Response('Hello World');
+        return $this->render('base.html.twig');
     }
 }

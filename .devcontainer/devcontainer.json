@@ -13,7 +13,8 @@
 		"ikappas.phpcs",
 		"valeryanm.vscode-phpsab",
 		"neilbrayfield.php-docblocker",
-		"xdebug.php-debug"
+		"xdebug.php-debug",
+		"junstyle.twig-language"
 	],
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/usr/local/src,type=bind,consistency=cached"
