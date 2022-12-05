@@ -14,7 +14,8 @@
 		"valeryanm.vscode-phpsab",
 		"neilbrayfield.php-docblocker",
 		"xdebug.php-debug",
-		"junstyle.twig-language"
+		"junstyle.twig-language",
+		"esbenp.prettier-vscode"
 	],
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/usr/local/src,type=bind,consistency=cached"
