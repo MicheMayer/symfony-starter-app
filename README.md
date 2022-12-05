@@ -14,8 +14,9 @@ For infos on how to start the dev container, see https://code.visualstudio.com/d
 
 ## Features of this Dev Container
 
-### webserver server
+### Dev server
 
-To start the webserver press `crtl` + `shift` + `P`
+To start the devserver press `crtl` + `shift` + `P`
 Type: `Tasks: Run task`
-Select hte task `develop`
+Run the following tasks: `dev-server`
+
