@@ -4,7 +4,7 @@
 		"dockerfile": "dockerfile",
 		"context": "."
 	},
-	"forwardPorts": [8000, 9003],
+	"forwardPorts": [ 8000 ],
     "settings": {
       "git.path": "/usr/bin/git"
 	},
