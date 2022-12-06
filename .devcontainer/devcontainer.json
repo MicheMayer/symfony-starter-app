@@ -1,5 +1,5 @@
 {
-    "name": "php-vsc-devcontainer",
+    "name": "symfony-starter-app",
 	"build": {
 		"dockerfile": "dockerfile",
 		"context": "."
