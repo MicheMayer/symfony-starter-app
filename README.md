@@ -14,9 +14,20 @@ For infos on how to start the dev container, see https://code.visualstudio.com/d
 
 ## Features of this Dev Container
 
-### Dev server
+### Tasks
 
-To start the devserver press `crtl` + `shift` + `P`
-Type: `Tasks: Run task`
-Run the following tasks: `dev-server`
+To run a task press `crtl` + `shift` + `P`
+Also see https://code.visualstudio.com/docs/editor/tasks
 
+### Dependencies
+
+Run task `install dependencies`
+
+### Dev erver
+
+Run task `dev-server`
+If you have not yet installed your projects dependencies, make sure to to so first.
+
+### Static code analysis
+
+Run task `analyse code`

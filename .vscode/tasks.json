@@ -87,7 +87,7 @@
             }
         },
         {
-            "label": "install npm dependencies",
+            "label": "install dependencies",
             "type": "shell",
             "group": {
                 "kind": "build",
