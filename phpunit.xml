@@ -1,0 +1,31 @@
+<phpunit 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    cacheResultFile="var/cache/.phpunit.result.cache"
+>
+    <coverage cacheDirectory="var/cache"
+            includeUncoveredFiles="true"
+            processUncoveredFiles="true"
+            pathCoverage="true"
+            ignoreDeprecatedCodeUnits="true">
+        <include>
+            <directory suffix=".php">app</directory>
+        </include>
+        <report>
+            <html outputDirectory="public/bundles/phpunit/coverage" lowUpperBound="50" highLowerBound="90"/>
+        </report>
+    </coverage>
+
+    <testsuites>
+        <testsuite name="default">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <server name="KERNEL_CLASS" value="Dev\App\Kernel" force="true"/>
+        <env name="APP_ENV" value="test" force="true"/>
+        <env name="APP_DEBUG" value="true" force="true"/>
+    </php>
+
+</phpunit>
