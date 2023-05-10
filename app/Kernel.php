@@ -24,6 +24,7 @@ class Kernel extends BaseKernel
 
     /**
      * @inheritDoc
+     * @codeCoverageIgnore
      */
     protected function configureContainer(ContainerConfigurator $container): void
     {
@@ -33,6 +34,7 @@ class Kernel extends BaseKernel
 
     /**
      * @inheritDoc
+     * @codeCoverageIgnore
      */
     protected function configureRoutes(RoutingConfigurator $routes): void
     {
