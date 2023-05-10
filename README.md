@@ -23,11 +23,26 @@ Also see https://code.visualstudio.com/docs/editor/tasks
 
 Run task `install dependencies`
 
-### Dev erver
+### Dev server
 
 Run task `dev-server`
 If you have not yet installed your projects dependencies, make sure to to so first.
 
 ### Static code analysis
+This project uses a static analysis tool called Psalm.
+Check out https://github.com/vimeo/psalm for more information on it.
 
 Run task `analyse code`
+
+### Unit Testing
+This project is also configured to support automated testing out of the box using PHPUnit.
+See https://phpunit.de/ for more information. Try to write your own tests!
+
+
+To run your tests use this task.
+
+Run task `run tests`
+
+Alternatively use can also use the debugger to step through a particular unit test.
+Just change the profile to 'run tests in debug mode'.
+If you are testing web views, make sure to run the task `build encore` first.

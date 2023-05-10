@@ -97,5 +97,31 @@
                 "clear": true
             }
         },
+        {
+            "label": "run tests",
+            "type": "shell",
+            "group": "test",
+            "command": "${workspaceFolder}/bin/phpunit",
+            "args": [
+                "--testsuite=default"
+            ],
+            "dependsOn": [
+                "build encore",
+            ],
+            "presentation": {
+                "clear": true,
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "build encore",
+            "type": "shell",
+            "group": "build",
+            "command": "npm run build",
+            "presentation": {
+                "clear": true,
+                "showReuseMessage": false
+            }
+        },
     ]
 }
