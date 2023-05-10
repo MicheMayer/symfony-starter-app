@@ -105,6 +105,12 @@
             "args": [
                 "--testsuite=default"
             ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "XDEBUG_MODE": "coverage"
+                },
+            },
             "dependsOn": [
                 "build encore",
             ],

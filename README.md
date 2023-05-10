@@ -46,3 +46,5 @@ Run task `run tests`
 Alternatively use can also use the debugger to step through a particular unit test.
 Just change the profile to 'run tests in debug mode'.
 If you are testing web views, make sure to run the task `build encore` first.
+
+Checkout the code coverage under localhost:8000/bundles/phpunit/coverage/

@@ -5,3 +5,6 @@ services:
 
     Dev\App\:
         resource: '%kernel.project_dir%/app'
+
+    greetings:
+        class: Dev\App\Service\GreetingService

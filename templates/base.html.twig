@@ -19,10 +19,12 @@
   <body>
     {% block body %}
       <div class="wrapper">
-        <p>
-            <h1>Hello Github!</h1>
-            <img src="{{ asset('assets/images/GitHub-Mark-64px.png') }}" />
-        </p>
+        <div>
+          <h1>{{ greetings.greetingGithub() }}</h1>
+          <p>
+              <img src="{{ asset('assets/images/GitHub-Mark-64px.png') }}" width="200px" height="200px" />
+          </p>
+        </div>
       </div>
     {% endblock %}
   </body>
