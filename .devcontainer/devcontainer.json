@@ -5,19 +5,23 @@
 		"context": "."
 	},
 	"forwardPorts": [ 8000 ],
-    "settings": {
-      "git.path": "/usr/bin/git"
-	},
-	"extensions": [
-		"bmewburn.vscode-intelephense-client",
-		"valeryanm.vscode-phpsab",
-		"neilbrayfield.php-docblocker",
-		"xdebug.php-debug",
-		"junstyle.twig-language",
-		"esbenp.prettier-vscode"
-	],
-	"mounts": [
-		"source=${localWorkspaceFolder},target=/usr/local/src,type=bind,consistency=cached"
-	],
-  "workspaceFolder": "/usr/local/src"
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"git.path": "/usr/bin/git"
+			  },
+			  "extensions": [
+				  "bmewburn.vscode-intelephense-client",
+				  "valeryanm.vscode-phpsab",
+				  "neilbrayfield.php-docblocker",
+				  "xdebug.php-debug",
+				  "junstyle.twig-language",
+				  "esbenp.prettier-vscode"
+			  ],
+			  "mounts": [
+				  "source=${localWorkspaceFolder},target=/usr/local/src,type=bind,consistency=cached"
+			  ],
+			"workspaceFolder": "/usr/local/src"
+		}
+	}
   }
