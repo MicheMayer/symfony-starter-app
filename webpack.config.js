@@ -15,6 +15,12 @@ Encore
     //.setManifestKeyPrefix('build/')
     .addEntry('app', './assets/app.js')
 
+    // copy image files to public
+    .copyFiles({
+        from: "./assets/images",
+        to: Encore.isProduction() ? 'images/[path][name].[hash:8].[ext]' : "images/[path][name].[ext]",
+      })
+
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
 

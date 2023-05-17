@@ -25,7 +25,7 @@
             "command": "symfony",
             "args": [
                 "server:start",
-                "--dir=/usr/local/src/public",
+                "--dir=${workspaceFolder}/public",
             ],
             "presentation": {
                 "showReuseMessage": false,
